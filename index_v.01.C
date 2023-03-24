@@ -8,89 +8,153 @@ int main() {
 
     int userChoice, computerChoice;
 
+    char playAgain;
+
+    int userWins = 0;
+
+    int computerWins = 0;
+
+    int numRounds;
+
     srand(time(NULL));
 
-    printf("Let's play rock paper scissors!\n");
+    
 
-    printf("Enter your choice (1 for rock, 2 for paper, 3 for scissors): ");
+    printf("Welcome to the rock-paper-scissors game, created by Bayovrosky!\n");
 
-    scanf("%d", &userChoice);
+    do {
 
-    if (userChoice < 1 || userChoice > 3) {
+        printf("\n\nEnter the number of rounds you want to play: ");
 
-        printf("Invalid choice. Please enter a number between 1 and 3.\n");
+        scanf("%d", &numRounds);
 
-        return 1;
+        for (int i = 0; i < numRounds; i++) {
 
-    }
+            printf("\nEnter your choice (1 for rock, 2 for paper, 3 for scissors): ");
 
-    computerChoice = rand() % 3 + 1;
+            scanf("%d", &userChoice);
 
-    printf("You chose ");
+            if (userChoice < 1 || userChoice > 3) {
 
-    switch (userChoice) {
+                printf("Invalid choice. Please enter a number between 1 and 3.\n");
 
-        case 1:
+                return 1;
 
-            printf("rock.\n");
+            }
 
-            break;
+            computerChoice = rand() % 3 + 1;
 
-        case 2:
+            printf("You chose ");
 
-            printf("paper.\n");
+            switch (userChoice) {
 
-            break;
+                case 1:
 
-        case 3:
+                    printf("rock.\n");
 
-            printf("scissors.\n");
+                    break;
 
-            break;
+                case 2:
 
-    }
+                    printf("paper.\n");
 
-    printf("The computer chose ");
+                    break;
 
-    switch (computerChoice) {
+                case 3:
 
-        case 1:
+                    printf("scissors.\n");
 
-            printf("rock.\n");
+                    break;
 
-            break;
+            }
 
-        case 2:
+            printf("The computer chose ");
 
-            printf("paper.\n");
+            switch (computerChoice) {
 
-            break;
+                case 1:
 
-        case 3:
+                    printf("rock. ");
 
-            printf("scissors.\n");
+                    if (userChoice == 1) {
 
-            break;
+                        printf("We both chose the same thing, how boring.\n");
 
-    }
+                    } else if (userChoice == 2) {
 
-    if (userChoice == computerChoice) {
+                        printf("I see you like paper.\n");
 
-        printf("It's a tie!\n");
+                    } else {
 
-    } else if ((userChoice == 1 && computerChoice == 3) ||
+                        printf("Looks like I'm the winner this time!\n");
 
-               (userChoice == 2 && computerChoice == 1) ||
+                        computerWins++;
 
-               (userChoice == 3 && computerChoice == 2)) {
+                    }
 
-        printf("You win!\n");
+                    break;
 
-    } else {
+                case 2:
 
-        printf("The computer wins!\n");
+                    printf("paper. ");
 
-    }
+                    if (userChoice == 1) {
+
+                        printf("Ha, you thought rock could beat me?\n");
+
+                        computerWins++;
+
+                    } else if (userChoice == 2) {
+
+                        printf("We're evenly matched, huh?\n");
+
+                    } else {
+
+                        printf("Nice try, but scissors can't cut paper!\n");
+
+                        userWins++;
+
+                    }
+
+                    break;
+
+                case 3:
+
+                    printf("scissors. ");
+
+                    if (userChoice == 1) {
+
+                        printf("You may have won this round, but I'll be back.\n");
+
+                        userWins++;
+
+                    } else if (userChoice == 2) {
+
+                        printf("I'm sorry, but your paper is no match for my scissors.\n");
+
+                        computerWins++;
+
+                    } else {
+
+                        printf("It's a tie!\n");
+
+                    }
+
+                    break;
+
+            }
+
+        }
+
+        printf("\nFinal score: User %d - %d Computer\n", userWins, computerWins);
+
+        printf("\nWould you like to play again? (y/n): ");
+
+        scanf(" %c", &playAgain);
+
+    } while (playAgain == 'y' || playAgain == 'Y');
+
+    printf("\nThanks for playing! Goodbye.\n");
 
     return 0;
 
