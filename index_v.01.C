@@ -78,7 +78,7 @@ int main() {
 
                     if (userChoice == 1) {
 
-                        printf("We both chose the same thing, how boring.\n");
+                        printf("We both chose the same thing,It's a draw.\n");
 
                     } else if (userChoice == 2) {
 
@@ -106,7 +106,7 @@ int main() {
 
                     } else if (userChoice == 2) {
 
-                        printf("We're evenly matched, huh?\n");
+                        printf("We're evenly matched,\n");
 
                     } else {
 
@@ -154,7 +154,7 @@ int main() {
 
     } while (playAgain == 'y' || playAgain == 'Y');
 
-    printf("\nThanks for playing.\n");
+    printf("\nThanks for playing. Kindly give me a star if you were impressed.\n");
 
     return 0;
 
