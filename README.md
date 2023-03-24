@@ -1,27 +1,36 @@
-Rock-Paper-Scissors Game
-Welcome to the classic game of Rock-Paper-Scissors, coded in C! You'll be playing against the computer, so get ready to show off your skills and beat the machine.
+# Rock-Paper-Scissors Game
 
-How to Play
+Welcome to the classic game of Rock-Paper-Scissors, coded in C! :video_game:
+
+---
+
+## How to Play
+
 Playing is simple:
 
-Clone the repository onto your computer.
-Open up your terminal and navigate to the project directory.
-Compile the code using a C compiler.
-Run the executable file.
-Follow the on-screen instructions to play the game.
-Rules
-You probably know the rules already, but just in case:
+1. Clone the repository onto your computer. :computer:
+2. Open up your terminal and navigate to the project directory.
+3. Compile the code using a C compiler. :hammer:
+4. Run the executable file. :arrow_forward:
+5. Follow the on-screen instructions to play the game.
 
-Rock beats scissors.
-Scissors beats paper.
-Paper beats rock.
+---
+
+## Rules
+
+Here are the basic rules of the game:
+
+1. Rock beats scissors.
+2. Scissors beats paper.
+3. Paper beats rock.
+
 It's a one-round game where each player chooses one of the three moves. The winner is determined based on the rules above, and if both players pick the same move, it's a tie.
 
-Additional Information
-The computer's move is randomly generated.
-Have fun, and may the odds be ever in your favor!
-Enjoy the game, and feel free to customize the code or suggest changes. Let's get playing!
+---
 
+## Additional Information
 
+- The computer's move is randomly generated. :game_die:
+- Have fun, and may the odds be ever in your favor! :smiley:
 
-
+Enjoy the game, and feel free to customize the code or suggest changes. Let's get playing! :tada:
