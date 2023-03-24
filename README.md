@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors Game
 
-Welcome to the classic game of Rock-Paper-Scissors, coded in C! :video_game:
+Welcome to the classic game of Rock-Paper-Scissors, coded in C. :video_game:
 
 ---
 
