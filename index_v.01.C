@@ -20,7 +20,7 @@ int main() {
 
     
 
-    printf("Welcome to the rock-paper-scissors game, created by Bayovrosky!\n");
+    printf("Welcome to the rock-paper-scissors game, created by Bayovrosky\n");
 
     do {
 
@@ -154,7 +154,7 @@ int main() {
 
     } while (playAgain == 'y' || playAgain == 'Y');
 
-    printf("\nThanks for playing! Goodbye.\n");
+    printf("\nThanks for playing.\n");
 
     return 0;
 
